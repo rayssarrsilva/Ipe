@@ -1,0 +1,25 @@
+import { create } from 'storybook/theming';
+
+export const ipeTheme = create({
+  base: 'light',
+  brandTitle: 'Ipê Design System',
+  brandUrl: 'https://github.com/rayssarrsilva/ipe',
+  brandTarget: '_blank',
+  colorPrimary: '#1F5A3A',
+  colorSecondary: '#264B8F',
+  appBg: '#FBF5E9',
+  appContentBg: '#FBF5E9',
+  appPreviewBg: '#FBF5E9',
+  appBorderColor: '#E5D9C3',
+  appBorderRadius: 16,
+  fontBase: '"Instrument Sans", system-ui, sans-serif',
+  textColor: '#231C14',
+  textMutedColor: '#6B5E4E',
+  barBg: '#F3EADA',
+  barTextColor: '#6B5E4E',
+  barSelectedColor: '#1F5A3A',
+  inputBg: '#FBF5E9',
+  inputBorder: '#8C7D69',
+  inputTextColor: '#231C14',
+  inputBorderRadius: 999,
+});

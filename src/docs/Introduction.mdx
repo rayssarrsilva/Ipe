@@ -1,0 +1,52 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Introduction" />
+
+# Ipê Design System
+
+**English** · [Português](#português)
+
+The ipê is a Brazilian tree that blooms in bright yellow during the driest months of the year. This design system borrows that idea: a calm, solid foundation that still carries color.
+
+Ipê is **clean, organic and unmistakably Brazilian**: cream backgrounds, coffee-brown text, and strong yet creamy accents in passion-fruit yellow, forest green, urucum and indigo.
+
+## Principles
+
+- **Accessible by default.** Every color pairing is checked against WCAG 2.2, including the 3:1 rule for form controls.
+- **One source of truth.** Tokens live in `/tokens`, are synced with Figma through Tokens Studio, and generate the CSS variables used by every component.
+- **Semantic over raw.** Components use roles like `action/primary`, never raw hex values, so themes switch without touching components.
+- **Calm motion.** Soft easing, short durations, and full support for `prefers-reduced-motion`.
+
+## Getting started
+
+```bash
+npm install @rayssarrsilva/ipe
+```
+
+```tsx
+import '@rayssarrsilva/ipe/styles.css';
+import { Button } from '@rayssarrsilva/ipe';
+
+export function App() {
+  return <Button>Plant a seed</Button>;
+}
+```
+
+Use the **Language** and **Theme** buttons in the toolbar above to switch every story between English and Portuguese, light and dark.
+
+---
+
+## Português
+
+O ipê é uma árvore brasileira que floresce em amarelo forte justamente nos meses mais secos do ano. Este design system parte dessa ideia: uma base calma e firme que ainda assim tem cor.
+
+O Ipê é **limpo, orgânico e brasileiro de raiz**: fundos creme, texto marrom-café e destaques fortes e cremosos em amarelo-maracujá, verde-mata, urucum e anil.
+
+## Princípios
+
+- **Acessível por padrão.** Toda combinação de cor é verificada pela WCAG 2.2, incluindo a regra de 3:1 para controles de formulário.
+- **Uma única fonte de verdade.** Os tokens ficam em `/tokens`, sincronizam com o Figma pelo Tokens Studio e geram as variáveis CSS usadas por todos os componentes.
+- **Semântico, não cru.** Componentes usam papéis como `action/primary`, nunca hex direto, então o tema muda sem mexer nos componentes.
+- **Movimento calmo.** Easing suave, durações curtas e suporte total a `prefers-reduced-motion`.
+
+Use os botões **Language** e **Theme** na barra acima para trocar todas as histórias entre inglês e português, claro e escuro.
