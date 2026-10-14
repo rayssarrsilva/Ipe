@@ -1,0 +1,75 @@
+{
+  "bg": {
+    "canvas": {
+      "value": "{color.cream.50}",
+      "type": "color"
+    },
+    "surface": {
+      "value": "{color.cream.100}",
+      "type": "color"
+    }
+  },
+  "text": {
+    "primary": {
+      "value": "{color.ink.900}",
+      "type": "color",
+      "description": "15.5:1 on canvas"
+    },
+    "secondary": {
+      "value": "{color.ink.700}",
+      "type": "color",
+      "description": "5.8:1 on canvas"
+    },
+    "on-accent": {
+      "value": "{color.ink.900}",
+      "type": "color",
+      "description": "10.4:1 on ipe"
+    },
+    "on-strong": {
+      "value": "{color.cream.50}",
+      "type": "color"
+    }
+  },
+  "border": {
+    "subtle": {
+      "value": "{color.cream.200}",
+      "type": "color",
+      "description": "Decorative dividers only"
+    },
+    "control": {
+      "value": "{color.ink.500}",
+      "type": "color",
+      "description": "Form controls, 3.68:1 (WCAG 1.4.11)"
+    },
+    "focus": {
+      "value": "{color.anil.700}",
+      "type": "color"
+    }
+  },
+  "action": {
+    "primary": {
+      "value": "{color.ipe.500}",
+      "type": "color"
+    },
+    "secondary": {
+      "value": "{color.mata.700}",
+      "type": "color",
+      "description": "7.5:1 with onStrong text"
+    }
+  },
+  "feedback": {
+    "success": {
+      "value": "{color.mata.700}",
+      "type": "color"
+    },
+    "danger": {
+      "value": "{color.urucum.600}",
+      "type": "color",
+      "description": "5.0:1 with onStrong text"
+    },
+    "info": {
+      "value": "{color.anil.700}",
+      "type": "color"
+    }
+  }
+}

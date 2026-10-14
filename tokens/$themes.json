@@ -1,0 +1,20 @@
+[
+  {
+    "id": "ipe-light",
+    "name": "Light",
+    "group": "Theme",
+    "selectedTokenSets": {
+      "core": "source",
+      "light": "enabled"
+    }
+  },
+  {
+    "id": "ipe-dark",
+    "name": "Dark",
+    "group": "Theme",
+    "selectedTokenSets": {
+      "core": "source",
+      "dark": "enabled"
+    }
+  }
+]
