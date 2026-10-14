@@ -47,9 +47,9 @@ const meta = {
   },
   parameters: {
     docs: {
-      description: {
-        component:
-          'Triggers an action. Use **one primary button per view** for the main action; `secondary` for supporting actions and `ghost` for low-emphasis ones.\n\nDispara uma ação. Use **um botão primário por tela** para a ação principal; `secondary` para ações de apoio e `ghost` para as de baixa ênfase.',
+      i18n: {
+        en: 'Triggers an action. Use **one primary button per view** for the main action, `secondary` for supporting actions and `ghost` for low-emphasis ones.',
+        pt: 'Dispara uma ação. Use **um botão primário por tela** para a ação principal, `secondary` para ações de apoio e `ghost` para as de baixa ênfase.',
       },
     },
   },
