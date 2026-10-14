@@ -4,13 +4,13 @@
 
 **Clean, organic and unmistakably Brazilian.**
 
-[![CI](https://github.com/rayssarrsilva/ipe/actions/workflows/ci.yml/badge.svg)](https://github.com/rayssarrsilva/ipe/actions/workflows/ci.yml)
-[![Storybook](https://img.shields.io/badge/Storybook-live-1F5A3A?logo=storybook&logoColor=white)](https://rayssarrsilva.github.io/ipe/)
+[![CI](https://github.com/rayssarrsilva/Ipe/actions/workflows/ci.yml/badge.svg)](https://github.com/rayssarrsilva/Ipe/actions/workflows/ci.yml)
+[![Storybook](https://img.shields.io/badge/Storybook-live-1F5A3A?logo=storybook&logoColor=white)](https://rayssarrsilva.github.io/Ipe/?path=/docs/introduction--docs)
 [![License: MIT](https://img.shields.io/badge/license-MIT-F7C531)](./LICENSE)
 
 **English** · [Português](./README.pt-BR.md)
 
-[Storybook](https://rayssarrsilva.github.io/ipe/) · [Figma](https://www.figma.com/design/o3irY2VOsGjlLt3fiAPTU0) · [Report a bug](https://github.com/rayssarrsilva/ipe/issues/new/choose)
+[Storybook](https://rayssarrsilva.github.io/Ipe/?path=/docs/introduction--docs) · [Foundations: Color](https://rayssarrsilva.github.io/Ipe/?path=/docs/foundations-color--docs) · [Figma](https://www.figma.com/design/o3irY2VOsGjlLt3fiAPTU0) · [Report a bug](https://github.com/rayssarrsilva/Ipe/issues/new/choose)
 
 </div>
 

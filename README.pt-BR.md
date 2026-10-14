@@ -4,13 +4,13 @@
 
 **Limpo, orgânico e brasileiro de raiz.**
 
-[![CI](https://github.com/rayssarrsilva/ipe/actions/workflows/ci.yml/badge.svg)](https://github.com/rayssarrsilva/ipe/actions/workflows/ci.yml)
-[![Storybook](https://img.shields.io/badge/Storybook-no%20ar-1F5A3A?logo=storybook&logoColor=white)](https://rayssarrsilva.github.io/ipe/)
+[![CI](https://github.com/rayssarrsilva/Ipe/actions/workflows/ci.yml/badge.svg)](https://github.com/rayssarrsilva/Ipe/actions/workflows/ci.yml)
+[![Storybook](https://img.shields.io/badge/Storybook-no%20ar-1F5A3A?logo=storybook&logoColor=white)](https://rayssarrsilva.github.io/Ipe/?path=/docs/introduction--docs&globals=locale:pt)
 [![Licença: MIT](https://img.shields.io/badge/licen%C3%A7a-MIT-F7C531)](./LICENSE)
 
 [English](./README.md) · **Português**
 
-[Storybook](https://rayssarrsilva.github.io/ipe/) · [Figma](https://www.figma.com/design/o3irY2VOsGjlLt3fiAPTU0) · [Reportar um bug](https://github.com/rayssarrsilva/ipe/issues/new/choose)
+[Storybook](https://rayssarrsilva.github.io/Ipe/?path=/docs/introduction--docs&globals=locale:pt) · [Fundamentos: Cor](https://rayssarrsilva.github.io/Ipe/?path=/docs/foundations-color--docs&globals=locale:pt) · [Figma](https://www.figma.com/design/o3irY2VOsGjlLt3fiAPTU0) · [Reportar um bug](https://github.com/rayssarrsilva/Ipe/issues/new/choose)
 
 </div>
 
