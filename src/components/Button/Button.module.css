@@ -1,0 +1,123 @@
+.button {
+  --button-bg: transparent;
+  --button-fg: var(--ipe-text-primary);
+  --button-border: transparent;
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ipe-spacing-2);
+  border: var(--ipe-border-width-thin) solid var(--button-border);
+  border-radius: var(--ipe-radius-pill);
+  background: var(--button-bg);
+  color: var(--button-fg);
+  font: var(--ipe-typography-label-md);
+  font-family: var(--ipe-font-families-body), system-ui, sans-serif;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    background-color var(--ipe-motion-duration-fast) var(--ipe-motion-easing-soft),
+    border-color var(--ipe-motion-duration-fast) var(--ipe-motion-easing-soft),
+    transform var(--ipe-motion-duration-fast) var(--ipe-motion-easing-soft);
+}
+
+.button:focus-visible {
+  outline: var(--ipe-border-width-focus) solid var(--ipe-border-focus);
+  outline-offset: 2px;
+}
+
+.button:active:not(:disabled, [aria-disabled='true']) {
+  transform: scale(0.98);
+}
+
+.button:disabled,
+.button[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.primary {
+  --button-bg: var(--ipe-action-primary);
+  --button-fg: var(--ipe-text-on-accent);
+}
+
+.primary:hover:not(:disabled, [aria-disabled='true']) {
+  --button-bg: color-mix(in oklab, var(--ipe-action-primary) 88%, var(--ipe-color-ink-900));
+}
+
+.secondary {
+  --button-bg: var(--ipe-action-secondary);
+  --button-fg: var(--ipe-text-on-strong);
+}
+
+.secondary:hover:not(:disabled, [aria-disabled='true']) {
+  --button-bg: color-mix(in oklab, var(--ipe-action-secondary) 88%, var(--ipe-color-ink-900));
+}
+
+.ghost {
+  --button-border: var(--ipe-border-control);
+}
+
+.ghost:hover:not(:disabled, [aria-disabled='true']) {
+  --button-bg: var(--ipe-bg-surface);
+}
+
+.sm {
+  min-height: 36px;
+  padding: 0 var(--ipe-spacing-4);
+}
+
+.md {
+  min-height: 44px;
+  padding: 0 var(--ipe-spacing-6);
+}
+
+.lg {
+  min-height: 52px;
+  padding: 0 var(--ipe-spacing-8);
+  font-size: var(--ipe-font-sizes-lg);
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.loading {
+  cursor: progress;
+}
+
+.loading .label {
+  opacity: 0.85;
+}
+
+.spinner {
+  width: 1em;
+  height: 1em;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 720ms linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+
+  .spinner {
+    animation-duration: 1.6s;
+  }
+
+  .button:active:not(:disabled, [aria-disabled='true']) {
+    transform: none;
+  }
+}
