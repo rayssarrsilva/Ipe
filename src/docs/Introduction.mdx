@@ -1,10 +1,11 @@
 import { Meta } from '@storybook/addon-docs/blocks';
+import { Lang } from './locale';
 
 <Meta title="Introduction" />
 
-# Ipê Design System
+<Lang only="en">
 
-**English** · [Português](#português)
+# Ipê Design System
 
 The ipê is a Brazilian tree that blooms in bright yellow during the driest months of the year. This design system borrows that idea: a calm, solid foundation that still carries color.
 
@@ -32,11 +33,13 @@ export function App() {
 }
 ```
 
-Use the **Language** and **Theme** buttons in the toolbar above to switch every story between English and Portuguese, light and dark.
+Use the **globe** and **theme** buttons in the toolbar to read this documentation in Portuguese and to switch between light and dark.
 
----
+</Lang>
 
-## Português
+<Lang only="pt">
+
+# Ipê Design System
 
 O ipê é uma árvore brasileira que floresce em amarelo forte justamente nos meses mais secos do ano. Este design system parte dessa ideia: uma base calma e firme que ainda assim tem cor.
 
@@ -49,4 +52,21 @@ O Ipê é **limpo, orgânico e brasileiro de raiz**: fundos creme, texto marrom-
 - **Semântico, não cru.** Componentes usam papéis como `action/primary`, nunca hex direto, então o tema muda sem mexer nos componentes.
 - **Movimento calmo.** Easing suave, durações curtas e suporte total a `prefers-reduced-motion`.
 
-Use os botões **Language** e **Theme** na barra acima para trocar todas as histórias entre inglês e português, claro e escuro.
+## Como começar
+
+```bash
+npm install @rayssarrsilva/ipe
+```
+
+```tsx
+import '@rayssarrsilva/ipe/styles.css';
+import { Button } from '@rayssarrsilva/ipe';
+
+export function App() {
+  return <Button>Plantar uma semente</Button>;
+}
+```
+
+Use os botões de **globo** e de **tema** na barra de ferramentas para ler esta documentação em inglês e alternar entre claro e escuro.
+
+</Lang>

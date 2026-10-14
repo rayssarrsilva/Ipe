@@ -12,13 +12,13 @@
   ],
   "author": "Rayssa Roberta (https://portfoliorayssarrsilva.site)",
   "license": "MIT",
-  "homepage": "https://github.com/rayssarrsilva/ipe#readme",
+  "homepage": "https://github.com/rayssarrsilva/Ipe#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rayssarrsilva/ipe.git"
+    "url": "git+https://github.com/rayssarrsilva/Ipe.git"
   },
   "bugs": {
-    "url": "https://github.com/rayssarrsilva/ipe/issues"
+    "url": "https://github.com/rayssarrsilva/Ipe/issues"
   },
   "type": "module",
   "sideEffects": [

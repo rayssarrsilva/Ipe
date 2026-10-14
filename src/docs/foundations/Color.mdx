@@ -1,22 +1,53 @@
 import { Meta } from '@storybook/addon-docs/blocks';
+import { Lang } from '../locale';
 import { PrimitivePalette, SemanticTable } from '../blocks/TokenBlocks';
 
 <Meta title="Foundations/Color" />
 
-# Color · Cor
+<Lang only="en">
+
+# Color
 
 **Primitives** are the raw palette. **Semantic tokens** give each color a job, and they are the only colors components use.
 
+## Primitives
+
+</Lang>
+
+<Lang only="pt">
+
+# Cor
+
 **Primitivas** são a paleta crua. **Tokens semânticos** dão uma função a cada cor e são as únicas cores que os componentes usam.
 
-## Primitives · Primitivas
+## Primitivas
+
+</Lang>
 
 <PrimitivePalette />
 
-## Semantic tokens · Tokens semânticos
+<Lang only="en">
+
+## Semantic tokens
+
+</Lang>
+
+<Lang only="pt">
+
+## Tokens semânticos
+
+</Lang>
 
 <SemanticTable />
 
-> The amber `ipe/500` is a **fill only** color: never use it as text on cream. Its contrast with `text/on-accent` is 10.4:1 (AAA).
->
-> O amarelo `ipe/500` é **só preenchimento**: nunca use como texto sobre o creme. Com `text/on-accent` o contraste é 10.4:1 (AAA).
+<Lang only="en">
+
+> The amber `ipe/500` is a **fill-only** color: never use it as text on cream. Paired with `text/on-accent`, its contrast is 10.4:1 (AAA).
+
+</Lang>
+
+<Lang only="pt">
+
+> O amarelo `ipe/500` é **só preenchimento**: nunca use como texto sobre o creme. Com `text/on-accent`, o contraste é 10.4:1 (AAA).
+
+</Lang>

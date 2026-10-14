@@ -1,5 +1,6 @@
 import type { CSSProperties } from 'react';
 import { coreTokens, darkTokens, lightTokens } from '../../tokens/generated/tokens';
+import { useLocale } from '../locale';
 
 const grid: CSSProperties = {
   display: 'grid',
@@ -39,6 +40,7 @@ export function PrimitivePalette() {
 }
 
 export function SemanticTable() {
+  const pt = useLocale() === 'pt';
   return (
     <table
       style={{ width: '100%', borderCollapse: 'collapse', margin: '24px 0 40px', fontSize: 14 }}
@@ -46,9 +48,9 @@ export function SemanticTable() {
       <thead>
         <tr style={{ textAlign: 'left', background: 'transparent' }}>
           <th style={{ padding: 8 }}>Token</th>
-          <th style={{ padding: 8 }}>CSS variable</th>
-          <th style={{ padding: 8 }}>Light</th>
-          <th style={{ padding: 8 }}>Dark</th>
+          <th style={{ padding: 8 }}>{pt ? 'Variável CSS' : 'CSS variable'}</th>
+          <th style={{ padding: 8 }}>{pt ? 'Claro' : 'Light'}</th>
+          <th style={{ padding: 8 }}>{pt ? 'Escuro' : 'Dark'}</th>
         </tr>
       </thead>
       <tbody>
@@ -93,6 +95,8 @@ function Chip({ hex }: { hex: string }) {
 const typeSamples = coreTokens.filter((t) => t.type === 'typography');
 
 export function TypeScale() {
+  const sample =
+    useLocale() === 'pt' ? 'O ipê floresce na seca' : 'The ipê blooms in the dry season';
   return (
     <div style={{ margin: '24px 0 40px' }}>
       {typeSamples.map((t) => (
@@ -119,7 +123,7 @@ export function TypeScale() {
               letterSpacing: t.name.includes('caps') ? '0.04em' : undefined,
             }}
           >
-            O ipê floresce na seca
+            {sample}
           </span>
         </div>
       ))}

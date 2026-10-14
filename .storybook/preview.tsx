@@ -1,6 +1,7 @@
 import type { Decorator, Preview } from '@storybook/react-vite';
 import '../src/styles/generated/tokens.css';
-import { ipeTheme } from './theme';
+import { IpeDocsContainer } from './IpeDocsContainer';
+import { IpeDocsPage } from './IpeDocsPage';
 
 const withThemeAndLocale: Decorator = (Story, context) => {
   const theme = (context.globals.theme as string | undefined) ?? 'light';
@@ -47,7 +48,7 @@ const preview: Preview = {
     controls: { expanded: true, sort: 'requiredFirst' },
     backgrounds: { disable: true },
     a11y: { test: 'error' },
-    docs: { theme: ipeTheme },
+    docs: { container: IpeDocsContainer, page: IpeDocsPage },
     options: {
       storySort: {
         order: ['Introduction', 'Foundations', 'Components'],
