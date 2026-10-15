@@ -1,0 +1,45 @@
+.label {
+  display: inline-block;
+  color: var(--ipe-text-primary);
+  font: var(--ipe-typography-label-md);
+  font-family: var(--ipe-font-families-body), system-ui, sans-serif;
+}
+
+.required {
+  color: var(--ipe-feedback-danger);
+}
+
+.hint,
+.error {
+  margin: 0;
+  font: var(--ipe-typography-body-sm);
+  font-family: var(--ipe-font-families-body), system-ui, sans-serif;
+}
+
+.hint {
+  color: var(--ipe-text-secondary);
+}
+
+.error {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--ipe-spacing-1);
+  color: var(--ipe-feedback-danger);
+}
+
+.error svg {
+  flex: none;
+  margin-top: 2px;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
