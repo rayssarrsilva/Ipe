@@ -30,7 +30,7 @@ Cream backgrounds, coffee-brown text, and strong yet creamy accents in passion-f
 - **Bilingual documentation.** Storybook switches every story between English and Portuguese, and between light and dark, from the toolbar.
 - **Works with or without Tailwind.** Ships plain CSS plus an optional Tailwind CSS v4 theme preset.
 - **Real-world patterns.** A complete, validated sign-up form built only with Ipê components lives in Storybook under _Patterns_.
-- **Accessibility checks built in.** Storybook's accessibility panel runs axe-core on every story, including color contrast, in light and dark.
+- **Tested in a real browser on every pull request.** Every story runs in Chromium, in light and dark, with its interaction test and an axe-core audit including color contrast. See [ACCESSIBILITY.md](./ACCESSIBILITY.md).
 
 ## Installation
 
@@ -99,7 +99,8 @@ Requires Node.js 22 (see `.nvmrc`).
 ```bash
 npm install
 npm run dev            # Storybook at http://localhost:6006
-npm test               # unit and accessibility tests
+npm test               # unit and accessibility tests (jsdom)
+npm run test:storybook # every story in real Chromium, light and dark
 npm run test:coverage  # with coverage thresholds
 npm run lint
 npm run typecheck
