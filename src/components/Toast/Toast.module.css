@@ -1,0 +1,62 @@
+.viewport {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ipe-spacing-3);
+  width: min(100vw, 420px);
+  max-width: 100vw;
+  margin: 0;
+  padding: var(--ipe-spacing-6);
+  list-style: none;
+  outline: none;
+}
+
+.toast {
+  --toast-tone: var(--ipe-border-control);
+
+  display: flex;
+  align-items: flex-start;
+  gap: var(--ipe-spacing-3);
+  padding: var(--ipe-spacing-4) var(--ipe-spacing-3) var(--ipe-spacing-4) var(--ipe-spacing-5);
+  border-left: 4px solid var(--toast-tone);
+  border-radius: var(--ipe-radius-lg);
+  box-shadow: var(--ipe-shadow-lg);
+}
+
+.toast[data-swipe='move'] {
+  transform: translateX(var(--radix-toast-swipe-move-x));
+}
+
+.toast[data-swipe='end'] {
+  transform: translateX(var(--radix-toast-swipe-end-x));
+}
+
+.success {
+  --toast-tone: var(--ipe-feedback-success);
+}
+
+.danger {
+  --toast-tone: var(--ipe-feedback-danger);
+}
+
+.text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--ipe-spacing-1);
+  padding-top: 6px;
+}
+
+.title {
+  font: var(--ipe-typography-label-md);
+  font-family: var(--ipe-font-families-body), system-ui, sans-serif;
+}
+
+.description {
+  color: var(--ipe-text-secondary);
+  font: var(--ipe-typography-body-sm);
+  font-family: var(--ipe-font-families-body), system-ui, sans-serif;
+}

@@ -1,0 +1,15 @@
+.content {
+  z-index: 60;
+  max-width: 260px;
+  padding: var(--ipe-spacing-2) var(--ipe-spacing-3);
+  border-radius: var(--ipe-radius-sm);
+  background: var(--ipe-text-primary);
+  color: var(--ipe-bg-canvas);
+  font: var(--ipe-typography-body-sm);
+  font-family: var(--ipe-font-families-body), system-ui, sans-serif;
+  box-shadow: var(--ipe-shadow-md);
+}
+
+.arrow {
+  fill: var(--ipe-text-primary);
+}
