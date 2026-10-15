@@ -1,6 +1,14 @@
 import * as ToastPrimitive from '@radix-ui/react-toast';
 import { clsx } from 'clsx';
-import { createContext, useCallback, useContext, useRef, useState, type ReactNode } from 'react';
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+  type ReactNode,
+} from 'react';
 import { Button } from '../Button';
 import { CloseIcon } from '../internal/icons';
 import overlay from '../internal/overlay.module.css';
@@ -61,6 +69,12 @@ export function Toaster({
 }: ToasterProps) {
   const [toasts, setToasts] = useState<ToastItem[]>([]);
   const nextId = useRef(0);
+  const exitTimers = useRef(new Set<ReturnType<typeof setTimeout>>());
+
+  useEffect(() => {
+    const timers = exitTimers.current;
+    return () => timers.forEach(clearTimeout);
+  }, []);
 
   const toast = useCallback<ToastFn>((options) => {
     nextId.current += 1;
@@ -70,7 +84,11 @@ export function Toaster({
 
   const dismiss = useCallback((id: number) => {
     setToasts((current) => current.map((t) => (t.id === id ? { ...t, open: false } : t)));
-    setTimeout(() => setToasts((current) => current.filter((t) => t.id !== id)), EXIT_MS);
+    const timer = setTimeout(() => {
+      exitTimers.current.delete(timer);
+      setToasts((current) => current.filter((t) => t.id !== id));
+    }, EXIT_MS);
+    exitTimers.current.add(timer);
   }, []);
 
   return (
