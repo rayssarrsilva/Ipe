@@ -1,0 +1,18 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ipe-spacing-2);
+}
+
+.input {
+  padding: 0 var(--ipe-spacing-4);
+}
+
+.md {
+  height: 44px;
+}
+
+.lg {
+  height: 52px;
+  font-size: var(--ipe-font-sizes-lg);
+}
