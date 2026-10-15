@@ -41,7 +41,7 @@ const preview: Preview = {
   },
   initialGlobals: {
     locale: 'en',
-    theme: 'light',
+    theme: typeof __IPE_TEST_THEME__ === 'undefined' ? 'light' : __IPE_TEST_THEME__,
   },
   parameters: {
     layout: 'centered',
