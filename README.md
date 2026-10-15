@@ -4,6 +4,7 @@
 
 **Clean, organic and unmistakably Brazilian.**
 
+[![npm](https://img.shields.io/npm/v/@rayssarrsilva/ipe?color=F7C531&label=npm)](https://www.npmjs.com/package/@rayssarrsilva/ipe)
 [![CI](https://github.com/rayssarrsilva/Ipe/actions/workflows/ci.yml/badge.svg)](https://github.com/rayssarrsilva/Ipe/actions/workflows/ci.yml)
 [![Storybook](https://img.shields.io/badge/Storybook-live-1F5A3A?logo=storybook&logoColor=white)](https://rayssarrsilva.github.io/Ipe/?path=/docs/introduction--docs)
 [![License: MIT](https://img.shields.io/badge/license-MIT-F7C531)](./LICENSE)
@@ -105,6 +106,8 @@ npm run test:coverage  # with coverage thresholds
 npm run lint
 npm run typecheck
 npm run build          # library output in /dist
+npm run check:package  # publint + Are The Types Wrong
+npm run test:smoke     # install the packed library into a fresh React app and build it
 ```
 
 ### Updating tokens
