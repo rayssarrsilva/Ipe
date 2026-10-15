@@ -29,7 +29,8 @@ Cream backgrounds, coffee-brown text, and strong yet creamy accents in passion-f
 - **Accessible by default.** Every color pair is checked against WCAG 2.2, including the 3:1 rule for form-control borders. Components are tested with keyboard interaction and axe-core.
 - **Bilingual documentation.** Storybook switches every story between English and Portuguese, and between light and dark, from the toolbar.
 - **Works with or without Tailwind.** Ships plain CSS plus an optional Tailwind CSS v4 theme preset.
-- **Tiny.** The Button entry is about 1.4 kB of JavaScript.
+- **Real-world patterns.** A complete, validated sign-up form built only with Ipê components lives in Storybook under _Patterns_.
+- **Accessibility checks built in.** Storybook's accessibility panel runs axe-core on every story, including color contrast, in light and dark.
 
 ## Installation
 
@@ -81,11 +82,11 @@ import { lightTokens } from '@rayssarrsilva/ipe/tokens';
 
 ## Components
 
-| Component                                | Status     |
-| ---------------------------------------- | ---------- |
-| Button                                   | ✅         |
-| Input, Textarea, Checkbox, Switch, Badge | 🌱 Next    |
-| Dialog, Toast, Tabs, Dropdown, Tooltip   | 🌱 Planned |
+| Component                                | Status  |
+| ---------------------------------------- | ------- |
+| Button                                   | ✅      |
+| Input, Textarea, Checkbox, Switch, Badge | ✅      |
+| Dialog, Toast, Tabs, Dropdown, Tooltip   | 🌱 Next |
 
 ## Tech stack
 

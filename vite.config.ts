@@ -20,7 +20,7 @@ export default defineConfig({
       cssFileName: 'ipe',
     },
     rollupOptions: {
-      external: ['react', 'react-dom', 'react/jsx-runtime', '@radix-ui/react-slot', 'clsx'],
+      external: [/^react(\/.*)?$/, /^react-dom(\/.*)?$/, /^@radix-ui\//, 'clsx'],
     },
     sourcemap: true,
   },

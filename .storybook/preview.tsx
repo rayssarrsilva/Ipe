@@ -51,7 +51,7 @@ const preview: Preview = {
     docs: { container: IpeDocsContainer, page: IpeDocsPage },
     options: {
       storySort: {
-        order: ['Introduction', 'Foundations', 'Components'],
+        order: ['Introduction', 'Foundations', 'Components', 'Patterns'],
       },
     },
   },

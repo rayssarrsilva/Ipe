@@ -1,0 +1,52 @@
+.badge {
+  --badge-tone: var(--ipe-text-secondary);
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 24px;
+  padding: 0 var(--ipe-spacing-3);
+  border-radius: var(--ipe-radius-pill);
+  color: var(--ipe-text-primary);
+  font: var(--ipe-typography-label-md);
+  font-family: var(--ipe-font-families-body), system-ui, sans-serif;
+  font-size: var(--ipe-font-sizes-xs);
+  white-space: nowrap;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--badge-tone);
+}
+
+.neutral {
+  border: var(--ipe-border-width-thin) solid var(--ipe-border-subtle);
+  background: var(--ipe-bg-surface);
+}
+
+.accent {
+  --badge-tone: var(--ipe-text-on-accent);
+
+  background: var(--ipe-action-primary);
+  color: var(--ipe-text-on-accent);
+}
+
+.success {
+  --badge-tone: var(--ipe-feedback-success);
+}
+
+.danger {
+  --badge-tone: var(--ipe-feedback-danger);
+}
+
+.info {
+  --badge-tone: var(--ipe-feedback-info);
+}
+
+.success,
+.danger,
+.info {
+  background: color-mix(in oklab, var(--badge-tone) 16%, var(--ipe-bg-canvas));
+}
