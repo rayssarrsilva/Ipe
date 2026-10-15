@@ -35,3 +35,18 @@ jobs:
         with:
           name: coverage
           path: coverage
+
+  storybook-tests:
+    name: Storybook tests in Chromium (light and dark)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:storybook
