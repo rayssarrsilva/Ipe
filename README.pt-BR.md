@@ -29,7 +29,8 @@ Fundos creme, texto marrom-café e destaques fortes e cremosos em amarelo-maracu
 - **Acessível por padrão.** Toda combinação de cor é verificada pela WCAG 2.2, incluindo a regra de 3:1 para bordas de campos. Os componentes são testados com teclado e axe-core.
 - **Documentação bilíngue.** O Storybook troca todas as histórias entre inglês e português, claro e escuro, pela barra de ferramentas.
 - **Funciona com ou sem Tailwind.** Entrega CSS puro e um preset opcional de tema para o Tailwind CSS v4.
-- **Leve.** O Button tem cerca de 1,4 kB de JavaScript.
+- **Padrões reais.** Um formulário de inscrição completo e validado, feito só com componentes do Ipê, está no Storybook em _Patterns_.
+- **Checagem de acessibilidade embutida.** O painel de acessibilidade do Storybook roda o axe-core em toda história, incluindo contraste de cores, no claro e no escuro.
 
 ## Instalação
 
@@ -81,11 +82,11 @@ import { lightTokens } from '@rayssarrsilva/ipe/tokens';
 
 ## Componentes
 
-| Componente                               | Status        |
-| ---------------------------------------- | ------------- |
-| Button                                   | ✅            |
-| Input, Textarea, Checkbox, Switch, Badge | 🌱 Próximos   |
-| Dialog, Toast, Tabs, Dropdown, Tooltip   | 🌱 Planejados |
+| Componente                               | Status      |
+| ---------------------------------------- | ----------- |
+| Button                                   | ✅          |
+| Input, Textarea, Checkbox, Switch, Badge | ✅          |
+| Dialog, Toast, Tabs, Dropdown, Tooltip   | 🌱 Próximos |
 
 ## Stack
 
