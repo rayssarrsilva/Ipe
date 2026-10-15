@@ -82,11 +82,11 @@ import { lightTokens } from '@rayssarrsilva/ipe/tokens';
 
 ## Components
 
-| Component                                | Status  |
-| ---------------------------------------- | ------- |
-| Button                                   | ✅      |
-| Input, Textarea, Checkbox, Switch, Badge | ✅      |
-| Dialog, Toast, Tabs, Dropdown, Tooltip   | 🌱 Next |
+| Component                                | Status |
+| ---------------------------------------- | ------ |
+| Button                                   | ✅     |
+| Input, Textarea, Checkbox, Switch, Badge | ✅     |
+| Dialog, Toast, Tabs, Dropdown, Tooltip   | ✅     |
 
 ## Tech stack
 
