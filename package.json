@@ -58,10 +58,11 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "typecheck": "npm run tokens && tsc --noEmit",
-    "test": "npm run tokens && vitest run",
+    "typecheck": "npm run tokens && tsc --noEmit && tsc --noEmit -p tsconfig.node.json",
+    "test": "npm run tokens && vitest run --project unit",
+    "test:storybook": "npm run tokens && vitest run --project storybook-light --project storybook-dark",
     "test:watch": "vitest",
-    "test:coverage": "npm run tokens && vitest run --coverage",
+    "test:coverage": "npm run tokens && vitest run --project unit --coverage",
     "changeset": "changeset",
     "release": "npm run build && changeset publish",
     "prepare": "husky"
@@ -97,6 +98,7 @@
     "@eslint/js": "^10.0.1",
     "@storybook/addon-a11y": "^10.6.2",
     "@storybook/addon-docs": "^10.6.2",
+    "@storybook/addon-vitest": "^10.6.2",
     "@storybook/react-vite": "^10.6.2",
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.3",
@@ -106,7 +108,9 @@
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",
-    "@vitest/coverage-v8": "^5.0.4",
+    "@vitest/browser": "^5.0.5",
+    "@vitest/browser-playwright": "^5.0.5",
+    "@vitest/coverage-v8": "^5.0.5",
     "axe-core": "^4.14.0",
     "eslint": "^10.12.0",
     "eslint-plugin-react-hooks": "^7.1.1",
@@ -115,6 +119,7 @@
     "husky": "^9.1.7",
     "jsdom": "^29.1.1",
     "lint-staged": "^16.4.0",
+    "playwright": "^1.64.1",
     "prettier": "^3.9.10",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
@@ -123,6 +128,6 @@
     "typescript": "~6.0.3",
     "typescript-eslint": "^8.71.2",
     "vite": "^8.3.4",
-    "vitest": "^5.0.4"
+    "vitest": "^5.0.5"
   }
 }

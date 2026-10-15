@@ -17,5 +17,5 @@
     "types": ["vite/client", "@testing-library/jest-dom/vitest"],
     "noEmit": true
   },
-  "include": ["src", ".storybook", "vite.config.ts", "vitest.setup.ts"]
+  "include": ["src", ".storybook", "vitest.setup.ts"]
 }
