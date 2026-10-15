@@ -53,7 +53,9 @@
   "scripts": {
     "tokens": "node scripts/build-tokens.mjs",
     "dev": "npm run tokens && storybook dev -p 6006",
-    "build": "npm run tokens && vite build && tsc -p tsconfig.build.json && node scripts/copy-css.mjs",
+    "build": "npm run tokens && vite build && tsc -p tsconfig.build.json && node scripts/fix-dts-imports.mjs && node scripts/copy-css.mjs",
+    "test:smoke": "node scripts/smoke-test.mjs",
+    "check:package": "publint && attw --pack . --profile esm-only --exclude-entrypoints ./styles.css ./tokens.css ./tailwind.css",
     "build-storybook": "npm run tokens && storybook build -o storybook-static",
     "lint": "eslint .",
     "format": "prettier --write .",
@@ -64,7 +66,7 @@
     "test:watch": "vitest",
     "test:coverage": "npm run tokens && vitest run --project unit --coverage",
     "changeset": "changeset",
-    "release": "npm run build && changeset publish",
+    "release": "npm run build && npm run check:package && changeset publish",
     "prepare": "husky"
   },
   "peerDependencies": {
@@ -92,6 +94,7 @@
     "clsx": "^2.1.1"
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.5",
     "@changesets/cli": "^3.0.3",
     "@commitlint/cli": "^21.2.3",
     "@commitlint/config-conventional": "^21.2.3",
@@ -121,6 +124,7 @@
     "lint-staged": "^16.4.0",
     "playwright": "^1.64.1",
     "prettier": "^3.9.10",
+    "publint": "^0.3.25",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "storybook": "^10.6.2",

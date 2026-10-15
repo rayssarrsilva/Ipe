@@ -4,6 +4,7 @@
 
 **Limpo, orgânico e brasileiro de raiz.**
 
+[![npm](https://img.shields.io/npm/v/@rayssarrsilva/ipe?color=F7C531&label=npm)](https://www.npmjs.com/package/@rayssarrsilva/ipe)
 [![CI](https://github.com/rayssarrsilva/Ipe/actions/workflows/ci.yml/badge.svg)](https://github.com/rayssarrsilva/Ipe/actions/workflows/ci.yml)
 [![Storybook](https://img.shields.io/badge/Storybook-no%20ar-1F5A3A?logo=storybook&logoColor=white)](https://rayssarrsilva.github.io/Ipe/?path=/docs/introduction--docs&globals=locale:pt)
 [![Licença: MIT](https://img.shields.io/badge/licen%C3%A7a-MIT-F7C531)](./LICENSE)
@@ -105,6 +106,8 @@ npm run test:coverage  # com limites mínimos de cobertura
 npm run lint
 npm run typecheck
 npm run build          # saída da biblioteca em /dist
+npm run check:package  # publint + Are The Types Wrong
+npm run test:smoke     # instala o pacote num app React novo e gera o build
 ```
 
 ### Atualizando os tokens
