@@ -7,6 +7,11 @@
     "surface": {
       "value": "{color.cream.100}",
       "type": "color"
+    },
+    "raised": {
+      "value": "{color.cream.50}",
+      "type": "color",
+      "description": "Floating layers: dialogs, menus, toasts"
     }
   },
   "text": {

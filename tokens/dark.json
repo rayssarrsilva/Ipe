@@ -7,6 +7,11 @@
     "surface": {
       "value": "{color.noite.900}",
       "type": "color"
+    },
+    "raised": {
+      "value": "{color.noite.900}",
+      "type": "color",
+      "description": "Floating layers: dialogs, menus, toasts. Lighter than canvas so depth reads in the dark"
     }
   },
   "text": {
