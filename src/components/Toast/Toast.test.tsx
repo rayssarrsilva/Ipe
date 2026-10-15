@@ -57,6 +57,9 @@ describe('Toast', () => {
     await user.click(screen.getAllByRole('button', { name: 'Close' })[0]!);
 
     await waitFor(() => expect(screen.getAllByText('Order placed')).toHaveLength(1));
+    // Let the exit timer remove the closed toast from state; the other one must stay.
+    await new Promise((resolve) => setTimeout(resolve, 300));
+    expect(screen.getAllByText('Order placed')).toHaveLength(1);
   });
 
   it('runs the action and uses an assertive announcement for danger', async () => {
@@ -96,6 +99,24 @@ describe('Toast', () => {
     await waitFor(() => expect(screen.queryByText('Quick note')).not.toBeInTheDocument(), {
       timeout: 2000,
     });
+  });
+
+  it('cancels pending exit timers when the Toaster unmounts', async () => {
+    const user = userEvent.setup();
+    const clear = vi.spyOn(globalThis, 'clearTimeout');
+    const { unmount } = render(
+      <Toaster>
+        <Trigger title="Leaving soon" />
+      </Toaster>,
+    );
+
+    await user.click(screen.getByRole('button', { name: 'Notify' }));
+    await user.click(await screen.findByRole('button', { name: 'Close' }));
+    clear.mockClear();
+    unmount();
+
+    expect(clear).toHaveBeenCalled();
+    clear.mockRestore();
   });
 
   it('throws a helpful error outside of a Toaster', () => {
