@@ -30,7 +30,7 @@ Fundos creme, texto marrom-café e destaques fortes e cremosos em amarelo-maracu
 - **Documentação bilíngue.** O Storybook troca todas as histórias entre inglês e português, claro e escuro, pela barra de ferramentas.
 - **Funciona com ou sem Tailwind.** Entrega CSS puro e um preset opcional de tema para o Tailwind CSS v4.
 - **Padrões reais.** Um formulário de inscrição completo e validado, feito só com componentes do Ipê, está no Storybook em _Patterns_.
-- **Checagem de acessibilidade embutida.** O painel de acessibilidade do Storybook roda o axe-core em toda história, incluindo contraste de cores, no claro e no escuro.
+- **Testado em navegador real a cada pull request.** Toda história roda no Chromium, no claro e no escuro, com seu teste de interação e uma auditoria axe-core que inclui contraste de cores. Veja [ACCESSIBILITY.md](./ACCESSIBILITY.md).
 
 ## Instalação
 
@@ -99,7 +99,8 @@ Requer Node.js 22 (veja `.nvmrc`).
 ```bash
 npm install
 npm run dev            # Storybook em http://localhost:6006
-npm test               # testes unitários e de acessibilidade
+npm test               # testes unitários e de acessibilidade (jsdom)
+npm run test:storybook # toda história no Chromium real, claro e escuro
 npm run test:coverage  # com limites mínimos de cobertura
 npm run lint
 npm run typecheck
