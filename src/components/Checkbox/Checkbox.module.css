@@ -1,0 +1,62 @@
+.box {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border: 1.5px solid var(--ipe-border-control);
+  border-radius: calc(var(--ipe-radius-sm) - 2px);
+  background: var(--ipe-bg-canvas);
+  color: var(--ipe-text-on-strong);
+  cursor: pointer;
+  transition:
+    background-color var(--ipe-motion-duration-fast) var(--ipe-motion-easing-soft),
+    border-color var(--ipe-motion-duration-fast) var(--ipe-motion-easing-soft);
+}
+
+.box:hover:not(:disabled) {
+  border-color: var(--ipe-text-secondary);
+}
+
+.box:focus-visible {
+  outline: var(--ipe-border-width-focus) solid var(--ipe-border-focus);
+  outline-offset: 2px;
+}
+
+.box[data-state='checked'],
+.box[data-state='indeterminate'] {
+  border-color: var(--ipe-action-secondary);
+  background: var(--ipe-action-secondary);
+}
+
+.box[aria-invalid='true'] {
+  border-color: var(--ipe-feedback-danger);
+}
+
+.box:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.indicator {
+  display: inline-flex;
+}
+
+.check,
+.dash {
+  width: 16px;
+  height: 16px;
+}
+
+.indicator[data-state='checked'] .dash,
+.indicator[data-state='indeterminate'] .check {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .box {
+    transition: none;
+  }
+}
