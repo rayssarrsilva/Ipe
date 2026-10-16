@@ -32,6 +32,7 @@ Fundos creme, texto marrom-café e destaques fortes e cremosos em amarelo-maracu
 - **Funciona com ou sem Tailwind.** Entrega CSS puro e um preset opcional de tema para o Tailwind CSS v4.
 - **Padrões reais.** Um formulário de inscrição completo e validado, feito só com componentes do Ipê, está no Storybook em _Patterns_.
 - **Testado em navegador real a cada pull request.** Toda história roda no Chromium, no claro e no escuro, com seu teste de interação e uma auditoria axe-core que inclui contraste de cores. Veja [ACCESSIBILITY.md](./ACCESSIBILITY.md).
+- **Ciclo de QA documentado.** Plano de testes, 24 casos de teste e 6 relatórios de bug com evidência de antes e depois estão em [`/qa`](./qa). Toda correção saiu com um teste de regressão.
 
 ## Instalação
 
