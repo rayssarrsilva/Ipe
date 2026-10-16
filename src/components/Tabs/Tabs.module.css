@@ -76,3 +76,14 @@
     transition: none;
   }
 }
+
+/*
+ * Windows High Contrast drops the indicator background, so the selected tab looked
+ * like the others (QA bug). Paint it with a system color.
+ */
+@media (forced-colors: active) {
+  .trigger[data-state='active']::after {
+    forced-color-adjust: none;
+    background: Highlight;
+  }
+}

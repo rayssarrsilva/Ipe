@@ -48,3 +48,38 @@
     transition: none;
   }
 }
+
+/*
+ * Windows High Contrast replaces background colors, which made the track and thumb
+ * disappear (QA bug). Draw them with system colors instead.
+ */
+@media (forced-colors: active) {
+  .track {
+    border: 1px solid ButtonText;
+    padding: 1px;
+  }
+
+  .thumb {
+    forced-color-adjust: none;
+    background: ButtonText;
+    box-shadow: none;
+  }
+
+  .track[data-state='checked'] {
+    forced-color-adjust: none;
+    border-color: Highlight;
+    background: Highlight;
+  }
+
+  .thumb[data-state='checked'] {
+    background: HighlightText;
+  }
+
+  .track:disabled {
+    border-color: GrayText;
+  }
+
+  .track:disabled .thumb {
+    background: GrayText;
+  }
+}
