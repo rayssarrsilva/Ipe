@@ -2,6 +2,7 @@ import { clsx } from 'clsx';
 import { forwardRef, useState, type TextareaHTMLAttributes } from 'react';
 import control from '../internal/control.module.css';
 import { FieldLabel, FieldMessages, useField, type FieldBaseProps } from '../internal/field';
+import fieldStyles from '../internal/field.module.css';
 import styles from './Textarea.module.css';
 
 export interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement>, FieldBaseProps {
@@ -9,7 +10,15 @@ export interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElemen
   hideLabel?: boolean;
   /** Shows a live character counter. Requires `maxLength`. */
   showCount?: boolean;
+  /**
+   * What screen readers hear for the counter. The visible "9/280" alone has no context,
+   * so the default reads "9 of 280 characters". Pass your own to translate it.
+   */
+  formatCount?: (length: number, maxLength: number) => string;
 }
+
+const defaultFormatCount = (length: number, maxLength: number) =>
+  `${length} of ${maxLength} characters`;
 
 const lengthOf = (value: unknown) =>
   value === undefined || value === null ? 0 : String(value).length;
@@ -21,6 +30,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(function 
     error,
     hideLabel = false,
     showCount = false,
+    formatCount = defaultFormatCount,
     id,
     required,
     className,
@@ -75,12 +85,17 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(function 
             />
           </div>
           {counted && (
-            <span
-              id={counterId}
-              className={clsx(styles.counter, length >= maxLength && styles.counterFull)}
-            >
-              {length}/{maxLength}
-            </span>
+            <>
+              <span
+                aria-hidden="true"
+                className={clsx(styles.counter, length >= maxLength && styles.counterFull)}
+              >
+                {length}/{maxLength}
+              </span>
+              <span id={counterId} className={fieldStyles.visuallyHidden}>
+                {formatCount(length, maxLength)}
+              </span>
+            </>
           )}
         </div>
       )}
