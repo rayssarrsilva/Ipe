@@ -52,6 +52,10 @@ export const Playground: Story = {
     const box = within(canvasElement).getByRole('checkbox');
     await userEvent.click(box);
     await expect(box).toBeChecked();
+
+    // WCAG 2.2 target size (2.5.8): the box alone must be at least 24x24 CSS px.
+    const { width, height } = box.getBoundingClientRect();
+    await expect(Math.min(width, height)).toBeGreaterThanOrEqual(24);
   },
 };
 

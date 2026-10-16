@@ -4,8 +4,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 22px;
-  height: 22px;
+  /* 24px meets WCAG 2.2 target size (2.5.8) on its own, even without the clickable label. */
+  width: 24px;
+  height: 24px;
   border: 1.5px solid var(--ipe-border-control);
   border-radius: calc(var(--ipe-radius-sm) - 2px);
   background: var(--ipe-bg-canvas);
@@ -58,5 +59,24 @@
 @media (prefers-reduced-motion: reduce) {
   .box {
     transition: none;
+  }
+}
+
+/* Windows High Contrast: keep the checked state visible with system colors. */
+@media (forced-colors: active) {
+  .box {
+    border-color: ButtonText;
+  }
+
+  .box[data-state='checked'],
+  .box[data-state='indeterminate'] {
+    forced-color-adjust: none;
+    border-color: Highlight;
+    background: Highlight;
+    color: HighlightText;
+  }
+
+  .box:disabled {
+    border-color: GrayText;
   }
 }
