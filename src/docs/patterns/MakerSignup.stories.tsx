@@ -20,6 +20,7 @@ const copy = {
     emailError: 'Enter an email like name@example.com.',
     story: 'What do you make?',
     storyHint: 'Materials, where you work, what makes it yours.',
+    count: (length: number, max: number) => `${length} of ${max} characters`,
     pickup: 'I can deliver in person',
     pickupHint: 'Buyers nearby will see a pickup option.',
     terms: 'I agree to the market guidelines',
@@ -37,6 +38,7 @@ const copy = {
     emailError: 'Digite um e-mail como nome@exemplo.com.',
     story: 'O que você produz?',
     storyHint: 'Materiais, onde você trabalha, o que torna a peça sua.',
+    count: (length: number, max: number) => `${length} de ${max} caracteres`,
     pickup: 'Posso entregar pessoalmente',
     pickupHint: 'Compradores por perto verão a opção de retirada.',
     terms: 'Concordo com as regras da feira',
@@ -69,8 +71,10 @@ function MakerSignupForm({ locale }: { locale: unknown }) {
       style={{
         display: 'grid',
         gap: 24,
+        boxSizing: 'border-box',
         width: 'min(100%, 520px)',
-        padding: 40,
+        // Smaller padding on narrow screens keeps the card inside 320px (WCAG 1.4.10 Reflow).
+        padding: 'clamp(20px, 6vw, 40px)',
         borderRadius: 24,
         background: 'var(--ipe-bg-surface)',
         boxShadow: 'var(--ipe-shadow-md)',
@@ -102,7 +106,14 @@ function MakerSignupForm({ locale }: { locale: unknown }) {
         hint={t.emailHint}
         error={emailInvalid ? t.emailError : undefined}
       />
-      <Textarea label={t.story} hint={t.storyHint} maxLength={280} showCount rows={3} />
+      <Textarea
+        label={t.story}
+        hint={t.storyHint}
+        maxLength={280}
+        showCount
+        formatCount={t.count}
+        rows={3}
+      />
       <Switch label={t.pickup} hint={t.pickupHint} defaultChecked />
       <Checkbox
         label={t.terms}
