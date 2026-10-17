@@ -92,7 +92,7 @@ export const Sizes: Story = {
   render: (args, { globals }) => {
     const t = pick(copy, globals.locale);
     return (
-      <div style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16, alignItems: 'center' }}>
         <Button {...args} size="sm">
           {t.small}
         </Button>
@@ -111,7 +111,7 @@ export const States: Story = {
   render: (args, { globals }) => {
     const t = pick(copy, globals.locale);
     return (
-      <div style={{ display: 'flex', gap: 16 }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16 }}>
         <Button {...args} loading>
           {t.loading}
         </Button>

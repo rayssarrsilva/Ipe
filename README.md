@@ -32,6 +32,7 @@ Cream backgrounds, coffee-brown text, and strong yet creamy accents in passion-f
 - **Works with or without Tailwind.** Ships plain CSS plus an optional Tailwind CSS v4 theme preset.
 - **Real-world patterns.** A complete, validated sign-up form built only with Ipê components lives in Storybook under _Patterns_.
 - **Tested in a real browser on every pull request.** Every story runs in Chromium, in light and dark, with its interaction test and an axe-core audit including color contrast. See [ACCESSIBILITY.md](./ACCESSIBILITY.md).
+- **QA cycle documented.** A test plan, 24 test cases and 6 bug reports with before and after evidence live in [`/qa`](./qa). Every fix shipped with a regression check.
 
 ## Installation
 

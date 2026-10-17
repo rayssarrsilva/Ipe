@@ -54,7 +54,25 @@ describe('Textarea', () => {
     );
     const textarea = screen.getByRole('textbox');
     expect(textarea).toBeInvalid();
-    expect(textarea).toHaveAccessibleDescription('Keep it short. Too long. 0/10');
+    expect(textarea).toHaveAccessibleDescription('Keep it short. Too long. 0 of 10 characters');
+  });
+
+  it('announces the counter with context and lets you translate it', async () => {
+    const user = userEvent.setup();
+    render(
+      <Textarea
+        label="Sua história"
+        maxLength={280}
+        showCount
+        formatCount={(length, max) => `${length} de ${max} caracteres`}
+      />,
+    );
+    const textarea = screen.getByRole('textbox');
+    await user.type(textarea, 'Cerâmica');
+
+    // Regression for QA bug: screen readers used to hear only "8/280".
+    expect(textarea).toHaveAccessibleDescription('8 de 280 caracteres');
+    expect(screen.getByText('8/280')).toHaveAttribute('aria-hidden', 'true');
   });
 
   it('does not show a counter without maxLength', () => {

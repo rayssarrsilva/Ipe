@@ -18,8 +18,13 @@ A violation fails the build. You can confirm it works: make `text/secondary` unr
 
 - [x] Keyboard only: every component is reachable with Tab and operable with Enter, Space, arrow keys and Escape (also covered by the interaction tests).
 - [x] `prefers-reduced-motion`: all transitions and animations are removed or slowed.
-- [ ] Screen readers: NVDA + Firefox and VoiceOver + Safari. **Planned** for the QA phase; results will be recorded in GitHub issues.
-- [ ] 200% and 400% zoom (WCAG 1.4.4 and 1.4.10). **Planned** for the QA phase.
+- [x] Windows High Contrast (`forced-colors: active`): every component checked. Switch, Tabs and Checkbox now draw their state with system colors (fixed in 1.0.1).
+- [x] Reflow at 320 CSS px (WCAG 1.4.10): components and the sign-up pattern fit without horizontal scroll (pattern fixed in 1.0.1).
+- [x] Target size (WCAG 2.5.8): every interactive element is at least 24 × 24 CSS px (Checkbox fixed in 1.0.1, checked in CI).
+- [ ] Screen readers: NVDA + Firefox, then VoiceOver + Safari, following [the manual script](./qa/MANUAL-CHECKS.md).
+- [ ] 200% and 400% browser zoom (WCAG 1.4.4 and 1.4.10), in the same script.
+
+The full test plan, test cases and bug reports are in [`/qa`](./qa).
 
 ## Known exceptions
 
@@ -47,8 +52,13 @@ O Ipê tem como meta a **WCAG 2.2 nível AA**. Esta página descreve o que é ve
 
 - [x] Só teclado: todo componente é alcançável com Tab e operável com Enter, Espaço, setas e Esc.
 - [x] `prefers-reduced-motion`: transições e animações são removidas ou desaceleradas.
-- [ ] Leitores de tela (NVDA + Firefox e VoiceOver + Safari): **planejado** para a fase de QA, com resultados registrados em issues.
-- [ ] Zoom de 200% e 400% (WCAG 1.4.4 e 1.4.10): **planejado** para a fase de QA.
+- [x] Alto contraste do Windows (`forced-colors: active`): todos os componentes verificados. Switch, Tabs e Checkbox agora mostram o estado com cores do sistema (corrigido na 1.0.1).
+- [x] Reflow em 320px (WCAG 1.4.10): componentes e o formulário de exemplo cabem sem rolagem lateral (corrigido na 1.0.1).
+- [x] Tamanho de alvo (WCAG 2.5.8): todo elemento interativo tem pelo menos 24 × 24px (Checkbox corrigido na 1.0.1 e verificado no CI).
+- [ ] Leitores de tela: NVDA + Firefox, depois VoiceOver + Safari, seguindo [o roteiro manual](./qa/MANUAL-CHECKS.md).
+- [ ] Zoom de 200% e 400% (WCAG 1.4.4 e 1.4.10), no mesmo roteiro.
+
+Plano de testes, casos de teste e relatórios de bug completos estão em [`/qa`](./qa).
 
 ### Exceções conhecidas
 
