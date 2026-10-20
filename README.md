@@ -21,7 +21,7 @@
 
 The ipê is a Brazilian tree that blooms in bright yellow during the driest months of the year. This design system borrows that idea: a calm, solid foundation that still carries color.
 
-Cream backgrounds, coffee-brown text, and strong yet creamy accents in passion-fruit yellow, forest green, urucum and indigo.
+Pure white and pure black backgrounds, with strong Brazilian colors that carry the brand: passion-fruit yellow, forest green, urucum and indigo.
 
 ## Highlights
 
