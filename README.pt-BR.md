@@ -21,7 +21,7 @@
 
 O ipê é uma árvore brasileira que floresce em amarelo forte justamente nos meses mais secos do ano. Este design system parte dessa ideia: uma base calma e firme que ainda assim tem cor.
 
-Fundos creme, texto marrom-café e destaques fortes e cremosos em amarelo-maracujá, verde-mata, urucum e anil.
+Fundos branco puro e preto puro, com cores brasileiras fortes que carregam a marca: amarelo-maracujá, verde-mata, urucum e anil.
 
 ## Destaques
 

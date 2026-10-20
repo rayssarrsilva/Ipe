@@ -103,4 +103,13 @@ run('npm install --no-audit --no-fund --loglevel=error', app);
 run('npx tsc -p tsconfig.bundler.json', app);
 run('npx tsc -p tsconfig.nodenext.json', app);
 run('npx vite build --logLevel warn', app);
+// Server Components frameworks need the components entry marked as client code,
+// while the tokens entry must stay importable on the server.
+const installed = join(app, 'node_modules', ...pkg.name.split('/'), 'dist');
+const head = (file) => readFileSync(join(installed, file), 'utf8').slice(0, 20);
+if (!/^['"]use client['"]/.test(head('index.js')))
+  throw new Error('dist/index.js must start with "use client"');
+if (/use client/.test(head('tokens.js')))
+  throw new Error('dist/tokens.js must not be a client module');
+
 console.log('\nSmoke test passed: a fresh React app can install, type-check and build with Ipê.');

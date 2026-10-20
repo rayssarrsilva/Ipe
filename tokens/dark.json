@@ -1,49 +1,51 @@
 {
   "bg": {
     "canvas": {
-      "value": "{color.noite.950}",
+      "value": "{color.neutral.1000}",
       "type": "color"
     },
     "surface": {
-      "value": "{color.noite.900}",
+      "value": "{color.neutral.900}",
       "type": "color"
     },
     "raised": {
-      "value": "{color.noite.900}",
+      "value": "{color.neutral.850}",
       "type": "color",
       "description": "Floating layers: dialogs, menus, toasts. Lighter than canvas so depth reads in the dark"
     }
   },
   "text": {
     "primary": {
-      "value": "{color.cream.50}",
+      "value": "{color.neutral.0}",
       "type": "color",
-      "description": "17:1 on canvas"
+      "description": "21:1 on canvas"
     },
     "secondary": {
-      "value": "{color.noite.300}",
+      "value": "{color.neutral.300}",
       "type": "color",
-      "description": "8.1:1 on canvas"
+      "description": "8.3:1 on canvas, 7.3:1 on surface"
     },
     "on-accent": {
-      "value": "{color.ink.900}",
-      "type": "color"
+      "value": "{color.neutral.950}",
+      "type": "color",
+      "description": "12.2:1 on ipe"
     },
     "on-strong": {
-      "value": "{color.ink.900}",
-      "type": "color"
+      "value": "{color.neutral.1000}",
+      "type": "color",
+      "description": "9.8:1 on mata 300"
     }
   },
   "border": {
     "subtle": {
-      "value": "{color.noite.800}",
+      "value": "{color.neutral.800}",
       "type": "color",
       "description": "Decorative dividers only"
     },
     "control": {
-      "value": "{color.noite.500}",
+      "value": "{color.neutral.400}",
       "type": "color",
-      "description": "Form controls, 3.63:1 (WCAG 1.4.11)"
+      "description": "Form controls, 6.1:1 (WCAG 1.4.11)"
     },
     "focus": {
       "value": "{color.anil.300}",
