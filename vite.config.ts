@@ -44,6 +44,11 @@ export default defineConfig({
     },
     rollupOptions: {
       external: [/^react(\/.*)?$/, /^react-dom(\/.*)?$/, /^@radix-ui\//, 'clsx'],
+      output: {
+        // Components use React context, so frameworks with Server Components (Next.js)
+        // must treat them as client code. Tokens stay plain data, usable on the server.
+        banner: (chunk) => (chunk.isEntry && chunk.name === 'index' ? "'use client';" : ''),
+      },
     },
     sourcemap: true,
   },
