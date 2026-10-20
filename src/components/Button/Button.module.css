@@ -45,7 +45,7 @@
 }
 
 .primary:hover:not(:disabled, [aria-disabled='true']) {
-  --button-bg: color-mix(in oklab, var(--ipe-action-primary) 88%, var(--ipe-color-ink-900));
+  --button-bg: color-mix(in oklab, var(--ipe-action-primary) 88%, var(--ipe-color-neutral-950));
 }
 
 .secondary {
@@ -54,7 +54,7 @@
 }
 
 .secondary:hover:not(:disabled, [aria-disabled='true']) {
-  --button-bg: color-mix(in oklab, var(--ipe-action-secondary) 88%, var(--ipe-color-ink-900));
+  --button-bg: color-mix(in oklab, var(--ipe-action-secondary) 88%, var(--ipe-color-neutral-950));
 }
 
 .ghost {

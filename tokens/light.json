@@ -1,50 +1,51 @@
 {
   "bg": {
     "canvas": {
-      "value": "{color.cream.50}",
+      "value": "{color.neutral.0}",
       "type": "color"
     },
     "surface": {
-      "value": "{color.cream.100}",
+      "value": "{color.neutral.50}",
       "type": "color"
     },
     "raised": {
-      "value": "{color.cream.50}",
+      "value": "{color.neutral.0}",
       "type": "color",
       "description": "Floating layers: dialogs, menus, toasts"
     }
   },
   "text": {
     "primary": {
-      "value": "{color.ink.900}",
+      "value": "{color.neutral.950}",
       "type": "color",
-      "description": "15.5:1 on canvas"
+      "description": "19.8:1 on canvas"
     },
     "secondary": {
-      "value": "{color.ink.700}",
+      "value": "{color.neutral.600}",
       "type": "color",
-      "description": "5.8:1 on canvas"
+      "description": "7.5:1 on canvas, 6.8:1 on surface"
     },
     "on-accent": {
-      "value": "{color.ink.900}",
+      "value": "{color.neutral.950}",
       "type": "color",
-      "description": "10.4:1 on ipe"
+      "description": "12.2:1 on ipe"
     },
     "on-strong": {
-      "value": "{color.cream.50}",
-      "type": "color"
+      "value": "{color.neutral.0}",
+      "type": "color",
+      "description": "8.1:1 on mata"
     }
   },
   "border": {
     "subtle": {
-      "value": "{color.cream.200}",
+      "value": "{color.neutral.100}",
       "type": "color",
       "description": "Decorative dividers only"
     },
     "control": {
-      "value": "{color.ink.500}",
+      "value": "{color.neutral.500}",
       "type": "color",
-      "description": "Form controls, 3.68:1 (WCAG 1.4.11)"
+      "description": "Form controls, 4.5:1 (WCAG 1.4.11)"
     },
     "focus": {
       "value": "{color.anil.700}",
